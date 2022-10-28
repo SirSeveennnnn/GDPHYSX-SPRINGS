@@ -1,0 +1,8 @@
+﻿  main.cpp
+E:\.School\GDPHYSX ENGINE 1\ENGINE 01\ENGINE 01\main.cpp(39,38): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\.School\GDPHYSX ENGINE 1\ENGINE 01\ENGINE 01\main.cpp(39,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\.School\GDPHYSX ENGINE 1\ENGINE 01\ENGINE 01\main.cpp(50,29): warning C4244: 'argument': conversion from 'float' to 'GLsizei', possible loss of data
+E:\.School\GDPHYSX ENGINE 1\ENGINE 01\ENGINE 01\main.cpp(50,22): warning C4244: 'argument': conversion from 'float' to 'GLsizei', possible loss of data
+E:\.School\GDPHYSX ENGINE 1\ENGINE 01\ENGINE 01\main.cpp(60,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\.School\GDPHYSX ENGINE 1\ENGINE 01\ENGINE 01\main.cpp(83,26): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+  ENGINE 01.vcxproj -> E:\.School\GDPHYSX ENGINE 1\ENGINE 01\x64\Debug\ENGINE 01.exe
