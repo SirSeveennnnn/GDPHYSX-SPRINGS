@@ -9,28 +9,20 @@ ElasticBungeeForce::ElasticBungeeForce(Particle* other, float springConstant, fl
 
 void ElasticBungeeForce::updateForce(Particle* particle, float time)
 {
-	glm::vec3 pos = particle->GetPosition();
-	glm::vec3 otherpos = other->GetPosition();
+	glm::vec3 force = particle->GetPosition();
+	force -= other->GetPosition();
 
-	glm::vec3 force = pos - otherpos;
-
-	float magnitude = glm::length(force);
+	float magnitude = sqrt((force.x * force.x) + (force.y * force.y) + (force.z * force.z));
 	if (magnitude <= restLength)
 	{
 		return;
 	}
 	magnitude = springConstant * (restLength - magnitude);
 
-	//glm::vec3 normalizedForce = glm::normalize(force); //These are commented out because it makes the values nand/-nand
-	//normalizedForce *= -magnitude;
-	glm::vec3 normalizedForce;
-	normalizedForce.x = force.x / magnitude;
-	normalizedForce.y = force.y / magnitude;
-	normalizedForce.z = force.z / magnitude;
+	glm::normalize(force); 
+	force *= magnitude;
 
-	normalizedForce *= -magnitude;
-
-	particle->AddForce(normalizedForce);
+	particle->AddForce(force);
 
 	//cout << "Magnitude: " << magnitude << endl;
 	//cout << "pos: x:" << pos.x << " y:" << pos.y << " z:" << pos.z << endl;

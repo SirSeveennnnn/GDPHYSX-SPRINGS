@@ -211,10 +211,10 @@ void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
             particles2[particleCounter2]->FireSpring();
 
             //first particle
-            BasicSpringForce* first = new BasicSpringForce(particles2[particleCounter2], 1.f, 50);
+            BasicSpringForce* first = new BasicSpringForce(particles2[particleCounter2], 0.1f, 70);
             registry->add(particles1[particleCounter1], first);
 
-            BasicSpringForce* second = new BasicSpringForce(particles1[particleCounter1], 1.f, 50);
+            BasicSpringForce* second = new BasicSpringForce(particles1[particleCounter1], 0.1f, 70);
             registry->add(particles2[particleCounter2], second);
           
             
@@ -233,7 +233,7 @@ void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
         else if (currentBallistic == AnchoredSpring)
         {
             particles1[particleCounter1]->FireSpring();
-            AnchoredSpringForce* anchor = new AnchoredSpringForce(glm::vec3(-50, -50, -30), 1.f, 50);
+            AnchoredSpringForce* anchor = new AnchoredSpringForce(glm::vec3(-50, -50, -30), 0.1f, 50);
             registry->add(particles1[particleCounter1], anchor);
 
             particleCounter1++;
@@ -243,7 +243,7 @@ void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
             }
 
             particles2[particleCounter2]->FireSpring();
-            AnchoredSpringForce* anchor2 = new AnchoredSpringForce(glm::vec3(50, -50, -30), 1.f, 50);
+            AnchoredSpringForce* anchor2 = new AnchoredSpringForce(glm::vec3(50, -50, -30), 0.1f, 50);
             registry->add(particles2[particleCounter2], anchor2);
 
             particleCounter2++;
@@ -258,10 +258,10 @@ void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
             particles2[particleCounter2]->FireSpring();
 
             //first particle
-            ElasticBungeeForce* first = new ElasticBungeeForce(particles2[particleCounter2], 1.f, 90);
+            ElasticBungeeForce* first = new ElasticBungeeForce(particles2[particleCounter2], 0.1f, 50);
             registry->add(particles1[particleCounter1], first);
 
-            ElasticBungeeForce* second = new ElasticBungeeForce(particles1[particleCounter1], 1.f, 90);
+            ElasticBungeeForce* second = new ElasticBungeeForce(particles1[particleCounter1], 0.1f, 50);
             registry->add(particles2[particleCounter2], second);
 
 
